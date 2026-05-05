@@ -1,0 +1,42 @@
+{
+  "source": "U.S. Department of Labor, Occupational Safety and Health Administration",
+  "source_url": "https://www.osha.gov/data",
+  "download_url": "https://data.dol.gov/data-catalog/OSHA/",
+  "description": "OSHA inspection and violation records",
+  "date_range": {
+    "start": "1970-06-20",
+    "end": "2026-04-24"
+  },
+  "inspection_count": 5174159,
+  "violation_count": 12765853,
+  "update_frequency": "Daily",
+  "disclaimer": "This data reflects federal and state OSHA enforcement actions. Absence of a record does not mean a workplace is safe. Not legal advice. Penalty amounts may be reduced through settlement.",
+  "data_freshness": {
+    "vintage": "2026-04",
+    "release_date": "2026-05-02",
+    "source_update_frequency": "daily",
+    "staleness_threshold_months": 6,
+    "staleness_action": "refresh_or_warn"
+  },
+  "search_format": [
+    "display_name",
+    "states",
+    "inspection_count",
+    "total_violations",
+    "willful",
+    "repeat",
+    "serious",
+    "other",
+    "total_penalties",
+    "fatality_inspections",
+    "earliest_year",
+    "latest_year"
+  ],
+  "viol_type_codes": {
+    "W": "Willful \u2014 employer intentionally violated or showed plain indifference",
+    "R": "Repeat \u2014 employer previously cited for substantially similar condition",
+    "S": "Serious \u2014 substantial probability of death or serious physical harm",
+    "O": "Other-than-Serious \u2014 direct relationship to safety/health",
+    "U": "Unclassified \u2014 technical violation"
+  }
+}

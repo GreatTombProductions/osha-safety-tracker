@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSHA Safety Tracker — Workplace Inspection Lookup</title>
+    <meta name="description" content="Search OSHA workplace safety inspection and violation records by employer name. 5 million inspections, 12 million violations, $6.5 billion in penalties — now searchable.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>OSHA Safety Tracker</h1>
+        <p class="subtitle">Search workplace safety inspection records</p>
+    </header>
+
+    <!-- Search -->
+    <main>
+        <div class="search-container">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search employer name..."
+                autocomplete="off"
+                autofocus
+            >
+            <div id="search-status" class="search-status"></div>
+        </div>
+
+        <!-- Filters (shown after search) -->
+        <div id="filters" class="filters hidden">
+            <select id="filter-state">
+                <option value="">All states</option>
+            </select>
+            <select id="filter-severity">
+                <option value="">All severities</option>
+                <option value="fatality">Has fatality investigation</option>
+                <option value="willful">Has willful violations</option>
+                <option value="repeat">Has repeat violations</option>
+                <option value="serious">Has serious violations</option>
+            </select>
+        </div>
+
+        <!-- Search Results -->
+        <div id="results" class="results"></div>
+
+        <!-- Employer Detail (shown when result is clicked) -->
+        <div id="detail" class="detail hidden">
+            <button id="back-btn" class="back-btn">&larr; Back to results</button>
+            <div id="detail-content"></div>
+        </div>
+
+        <!-- Stats (shown on initial page) -->
+        <div id="stats-panel" class="stats-panel">
+            <div class="stats-grid" id="stats-grid"></div>
+            <div id="top-industries" class="top-industries"></div>
+            <div id="violation-breakdown" class="violation-breakdown"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="data-source">
+            Data: <a href="https://www.osha.gov/data" target="_blank" rel="noopener">U.S. Department of Labor, OSHA</a>.
+            Updated daily. Inspection records from 1970 to present.
+        </p>
+        <p class="disclaimer">
+            Federal and state OSHA enforcement data. Not legal advice.
+            Absence of a record does not mean a workplace is safe.
+            Penalty amounts may be reduced through settlement.
+        </p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
